@@ -201,6 +201,8 @@ h1 {
     height: 50%;
     left: 0;
 
+    z-index: -1;
+
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -224,6 +226,9 @@ h1 {
         grid-template-columns: 1fr 1fr;
     }
 
+    .hero {
+        max-width: 30rem;
+    }
 
     .bg-1 {
         background-image: url("../images/bg-pattern-top-desktop.svg");
