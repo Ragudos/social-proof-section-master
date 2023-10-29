@@ -96,7 +96,7 @@ strong {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 1.5rem;
+    padding: 1.25rem 1.75rem;
 
     flex-wrap: wrap;
 
@@ -116,7 +116,7 @@ strong {
 
 .container {
     padding-inline: 1rem;
-    max-width: 1200px;
+    max-width: 1000px;
     margin-inline: auto;
 }
 
@@ -181,22 +181,40 @@ h1 {
 
     padding-block: 3rem;
     width: 96%;
-    background-image: url("../images/bg-pattern-top-mobile.svg");
 
 }
 
 .reviews {
     grid-template-columns: 1fr;
-
-    background-image: url("../images/bg-pattern-bottom-mobile.svg");
 }
 
-.reviews,
-.reviews-section {
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.bg {
+    width: 100%;
+    height: 50%;
+    left: 0;
+
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.bg-1 {
+    background-image: url("../images/bg-pattern-top-mobile.svg");
+    top: 0;
+}
+
+.bg-2 {
+    background-image: url("../images/bg-pattern-bottom-mobile.svg");
+    bottom: 0;
 }
 
 @media only screen and (min-width: 768px) {
@@ -204,19 +222,26 @@ h1 {
         text-align: start;
 
         grid-template-columns: 1fr 1fr;
-        background-image: url("../images/bg-pattern-top-mobile.svg");
+    }
 
+
+    .bg-1 {
+        background-image: url("../images/bg-pattern-top-desktop.svg");
+        top: 0;
+    }
+
+    .bg-2 {
+        background-image: url("../images/bg-pattern-bottom-desktop.svg");
+        bottom: 0;
     }
 
     .reviews {
         grid-column: span 2;
         grid-template-columns: 1fr 1fr 1fr;
-
-        background-image: url("../images/bg-pattern-bottom-desktop.svg");
     }
 
     .reviews li {
         height: 90%;
     }
-    
+
 }
